@@ -7,6 +7,9 @@
 // node_modules
 import { Geist } from "next/font/google";
 
+// components
+import Header from "@/components/common/Header/Header";
+
 //type
 import type { Metadata } from "next";
 
@@ -26,7 +29,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={geist.className}>{children}</body>
+      <body className={geist.className}>
+        {/* Header component */}
+        <Header />
+
+        {/* Main Content */}
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

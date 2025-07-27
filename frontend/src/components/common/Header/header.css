@@ -1,0 +1,71 @@
+
+/* =====================================
+  style for Header
+====================================== */
+
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 4px solid rgb(144, 144, 144);
+  background-color: rgb(227, 225, 225);
+  position: relative;
+
+  nav.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div > a.logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(176, 15, 176);
+    }
+
+    ul.navLinks {
+      margin-left: 30px;
+
+      a.navLink {
+        font-size: 20px;
+        font-weight: 600px;
+        margin: 0 12px;
+
+        &:hover {
+          color: darkblue;
+        }
+      }
+    }
+  }
+  div.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+
+    .btn {
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      border-radius: 10px;
+      font-size: 21px;
+      padding: 5px 10px;
+      font-weight: 600;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: #00008b;
+      }
+
+      &:active {
+        background-color: #000074;
+      }
+    }
+  }
+}
