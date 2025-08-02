@@ -12,11 +12,14 @@ import { Article } from "@/types/type.type";
 
 
 const Articlespage = async () => {
+  
   // Fetching articles from a public API
-
   const response: Response = await fetch(
     "https://jsonplaceholder.typicode.com/posts"
   );
+  if (!response.ok) {
+    throw new Error("Failed to fetch articles");
+  }
   const articles: Article[] = await response.json();
 
   return (
