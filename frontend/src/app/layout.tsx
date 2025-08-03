@@ -9,6 +9,7 @@ import { Geist } from "next/font/google";
 
 // components
 import Header from "@/components/common/Header/Header";
+import Footer from "@/components/common/footer/Footer";
 
 //type
 import type { Metadata } from "next";
@@ -35,6 +36,9 @@ export default function RootLayout({
 
         {/* Main Content */}
         <main>{children}</main>
+
+        {/* Footer component */}
+        <Footer />
       </body>
     </html>
   );

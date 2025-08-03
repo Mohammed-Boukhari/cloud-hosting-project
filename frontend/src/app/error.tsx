@@ -1,7 +1,7 @@
 /**
  * @copyright 2025 mohamed boukhari
  * @license Apache-2.0
- * @description error components for the articles page
+ * @description error components for the app
  */
 
 /* client component */
@@ -16,12 +16,10 @@ interface ErrorProps {
   reset: () => void;
 }
 
-const ArticleError = ({ error, reset }: ErrorProps) => {
+const Error = ({ error, reset }: ErrorProps) => {
   return (
-    <div style={{ paddingTop: "28px" }} className="fix-height text-center">
-      <p style={{ marginBottom: "8px" }}>
-        This is custom error page for articles route/page
-      </p>
+    <div style={{ paddingTop: "28px" }} className=" fix-height text-center">
+      <p style={{marginBottom: "8px"}}>This is custom error page for app</p>
       <div className="text-3xl text-red-600 font-semibold">
         Something went wrong
       </div>
@@ -49,4 +47,4 @@ const ArticleError = ({ error, reset }: ErrorProps) => {
   );
 };
 
-export default ArticleError;
+export default Error;
