@@ -7,16 +7,15 @@
 // components
 import ArtcleItem from "@/components/cloud-hosting-project/article/ArtcleItem";
 
+// utils
+import { URL } from "@/utils/URL";
+
 // type
 import { Article } from "@/types/type.type";
 
-
 const Articlespage = async () => {
-  
   // Fetching articles from a public API
-  const response: Response = await fetch(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
+  const response: Response = await fetch(URL);
   if (!response.ok) {
     throw new Error("Failed to fetch articles");
   }

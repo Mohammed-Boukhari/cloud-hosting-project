@@ -35,7 +35,7 @@ export default function RootLayout({
         <Header />
 
         {/* Main Content */}
-        <main>{children}</main>
+        <main className="fix-height">{children}</main>
 
         {/* Footer component */}
         <Footer />

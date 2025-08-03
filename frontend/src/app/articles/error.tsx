@@ -18,7 +18,7 @@ interface ErrorProps {
 
 const ArticleError = ({ error, reset }: ErrorProps) => {
   return (
-    <div style={{ paddingTop: "28px" }} className="fix-height text-center">
+    <div style={{ paddingTop: "28px" }} className="fix-height text-center !important">
       <p style={{ marginBottom: "8px" }}>
         This is custom error page for articles route/page
       </p>
