@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #efefef;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+.fix-height {
+  min-height: calc(100vh - 150px) !important;
+}
+
+.overflow-height {
+  height: calc(100vh - 150px) !important;
+}

@@ -1,0 +1,52 @@
+/* =====================================
+    Hero Section Styles
+ ===================================== */
+
+div.hero {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(10, 9, 9);
+  padding: 0 30px;
+
+  div.heroLeft {
+    h1.title {
+      font-size: 44px;
+      font-weight: bold;
+      color: black;
+    }
+    p.description {
+      font-size: 21px;
+    }
+    div.services {
+      padding: 5px;
+      margin-top: 15px;
+
+      div.service {
+        display: flex;
+        font-size: 21px;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  div.hero {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  div.heroLeft {
+    background-color: snow;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+  }
+}
