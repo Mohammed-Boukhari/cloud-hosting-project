@@ -7,8 +7,11 @@
 // utils
 import { URL } from "@/utils/URL";
 
-// types
+// components
 import { type Article } from "@/types/type.type";
+
+// types
+import AddCommentForm from "@/components/comments/AddCommentForm";
 interface SingleArticlePageProps {
   params: { id: string };
 }
@@ -42,6 +45,9 @@ const SingleArticlePage = async ({ params }: SingleArticlePageProps) => {
           {article.body}
         </p>
       </div>
+      {/* AddCommentForm */}
+      <AddCommentForm />
+      {/*=== AddCommentForm ===*/}
     </section>
   );
 };

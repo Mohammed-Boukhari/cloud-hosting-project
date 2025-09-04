@@ -6,12 +6,23 @@
 
 // components
 import ArtcleItem from "@/components/cloud-hosting-project/article/ArtcleItem";
+import SearchArticleInput from "@/components/cloud-hosting-project/article/SearchArticleInput";
+import Pagination from "@/components/cloud-hosting-project/article/Pagination";
 
 // utils
 import { URL } from "@/utils/URL";
 
 // type
+import type { Metadata } from "next";
 import { Article } from "@/types/type.type";
+
+
+// element for [ hade ]
+export const metadata: Metadata = {
+  title: "Articles Page  ",
+  description: "Articles about programming",
+};
+
 
 const Articlespage = async () => {
   // Fetching articles from a public API
@@ -26,13 +37,22 @@ const Articlespage = async () => {
       style={{ margin: " auto !important" }}
       className=" container m-auto px-5"
     >
+      {/* Search Article Input */}
+      <SearchArticleInput />
+      {/*=== Search Article Input ===*/}
+
       <div className=" flex items-center justify-center flex-wrap gap-7">
-        {articles.map((item) => (
+        {articles.slice(0, 6).map((item) => (
           <ArtcleItem key={item.id} item={item} />
         ))}
       </div>
+      {/*=== Pagination ===*/}
+      <Pagination />
+      {/*=== Pagination ===*/}
+
     </section>
   );
 };
 
 export default Articlespage;
+

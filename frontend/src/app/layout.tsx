@@ -23,7 +23,7 @@ const geist = Geist({ subsets: ["latin"] });
 // element for [ hade ]
 export const metadata: Metadata = {
   title: "Cloud Hosting",
-  description: "Cloud hosting projecy",
+  description: "Cloud hosting project",
 };
 
 export default function RootLayout({

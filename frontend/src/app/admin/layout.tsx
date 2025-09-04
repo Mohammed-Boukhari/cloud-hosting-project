@@ -7,6 +7,15 @@
 // UI components
 import AdminSidebar from "./_ui/AdminSidebar";
 
+//type
+import type { Metadata } from "next";
+
+// element for [ hade ]
+export const metadata: Metadata = {
+  title: "Admin Dashboard ",
+  description: "This is admin dashboard",
+};
+
 const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="overflow-height flex items-start justify-between overflow-hidden">
