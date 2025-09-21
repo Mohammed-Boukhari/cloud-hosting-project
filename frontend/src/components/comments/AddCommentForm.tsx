@@ -10,7 +10,7 @@
 
 // node_modules
 import { useState } from "react";
-import { toast } from "react-toastify"; // liprary
+import { toast } from "react-toastify"; // library
 
 const AddCommentForm = () => {
   const [Text, setText] = useState<string>("");
@@ -22,10 +22,7 @@ const AddCommentForm = () => {
   };
 
   return (
-    <form
-     
-      onSubmit={formSubmitHandler}
-    >
+    <form onSubmit={formSubmitHandler}>
       <input
         className="rounded-lg text-xl p-2 w-full bg-white focus:shadow-md"
         type="text"

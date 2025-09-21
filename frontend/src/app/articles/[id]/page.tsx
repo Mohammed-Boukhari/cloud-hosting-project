@@ -12,6 +12,7 @@ import { type Article } from "@/types/type.type";
 
 // types
 import AddCommentForm from "@/components/comments/AddCommentForm";
+import CommentItem from "@/components/comments/CommentItem";
 interface SingleArticlePageProps {
   params: { id: string };
 }
@@ -27,10 +28,13 @@ const SingleArticlePage = async ({ params }: SingleArticlePageProps) => {
 
   return (
     <section
-      style={{ paddingTop: `32px`, paddingInline: `20px` }}
+      // style={{ paddingTop: `32px`, paddingInline: `20px` }}
       className=" fix-height container m-auto w-full px-5 pt-8 md:w-3/4 "
     >
-      <div style={{ padding: `28px ` }} className="bg-white rounded-lg ">
+      <div
+        style={{ padding: `28px`, marginBottom: `28px` }}
+        className="bg-white p-7 rounded-lg"
+      >
         <h1
           style={{ marginBottom: `14px`, textTransform: `capitalize` }}
           className="text-3xl font-bold text-gray-700 "
@@ -48,6 +52,20 @@ const SingleArticlePage = async ({ params }: SingleArticlePageProps) => {
       {/* AddCommentForm */}
       <AddCommentForm />
       {/*=== AddCommentForm ===*/}
+
+      <h4 className="text-xl text-gray-800 ps-1 font-semibold mb-2 mt-7">
+        Comments
+      </h4>
+
+      {/* CommentItem */}
+      <CommentItem />
+      {/*=== CommentItem ===*/}
+      {/* CommentItem */}
+      <CommentItem />
+      {/*=== CommentItem ===*/}
+      {/* CommentItem */}
+      <CommentItem />
+      {/*=== CommentItem ===*/}
     </section>
   );
 };
