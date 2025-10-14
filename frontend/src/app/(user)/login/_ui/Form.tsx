@@ -10,9 +10,17 @@
 
 // node_modules
 import { useState } from "react";
-import { toast } from "react-toastify"; // liprary
+import { useRouter } from "next/navigation"; // next
+import { toast } from "react-toastify"; // library
+
+// types
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 const Form = () => {
+
+  const router: AppRouterInstance = useRouter();
+  
+  
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -21,6 +29,8 @@ const Form = () => {
 
     if (email === "") toast.error("Email is required");
     if (password === "") toast.error("Password is required");
+
+    router.replace("/");
   };
 
   return (

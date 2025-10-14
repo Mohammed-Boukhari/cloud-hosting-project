@@ -9,12 +9,20 @@
 
 // node_modules
 import { useState } from "react";
+import { useRouter } from "next/navigation"; //next
+
+// types
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 const SearchArticleInput = () => {
+  const router: AppRouterInstance = useRouter();
+
   const [searchText, setSearchText] = useState<string>("");
 
   const formSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    router.push(`/articles/search?searchText=${searchText}`);
   };
 
   return (
