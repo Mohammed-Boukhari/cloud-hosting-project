@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   description: "This is admin dashboard",
 };
 
-const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
+const LayoutAdmin = async ({ children }: { children: React.ReactNode }) => {
+
+  // Delay 3s
+  await new Promise((resolve) => { setTimeout(resolve, 3000) })
+  
   return (
     <div className="overflow-height flex items-start justify-between overflow-hidden">
       <div className=" overflow-height w-15 lg:w-1/5 bg-purple-600 text-white p-1 lg:p-5">
