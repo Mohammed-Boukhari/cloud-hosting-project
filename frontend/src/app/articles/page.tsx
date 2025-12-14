@@ -14,7 +14,7 @@ import { URL } from "@/utils/URL";
 
 // type
 import type { Metadata } from "next";
-import { Article } from "@/types/type.type";
+import { Article } from "@/types/article.type";
 
 // element for [ hade ]
 export const metadata: Metadata = {

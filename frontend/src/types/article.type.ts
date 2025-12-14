@@ -1,5 +1,5 @@
 /* =====================================
-  type for Typescript
+  type for article
  ===================================== */
 
 export type Article = {

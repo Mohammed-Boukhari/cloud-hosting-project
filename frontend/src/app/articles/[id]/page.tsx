@@ -8,7 +8,7 @@
 import { URL } from "@/utils/URL";
 
 // components
-import { type Article } from "@/types/type.type";
+import { type Article } from "@/types/article.type";
 
 // types
 import AddCommentForm from "@/components/comments/AddCommentForm";

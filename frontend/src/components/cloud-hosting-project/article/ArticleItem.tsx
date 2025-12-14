@@ -8,7 +8,7 @@
 import Link from "next/link";
 
 // type
-import { Article } from "@/types/type.type";
+import { Article } from "@/types/article.type";
 
 interface ArticleItemProps {
   item: Article;
